@@ -20,7 +20,7 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print("Welcome to the US Bikeshare Data Center.Let's check some data")
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city_name = ''
     while city_name.lower() not in CITY_DATA:
@@ -197,6 +197,7 @@ def user_stats(df, city):
         print('Earliest birth from the given fitered data is: {}\n'.format(earliest_birth))
         print('Most recent birth from the given fitered data is: {}\n'.format(most_recent_birth))
         print('Most common birth from the given fitered data is: {}\n'.format(most_common_birth) )
+
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
