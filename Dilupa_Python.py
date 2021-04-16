@@ -41,7 +41,7 @@ def get_filters():
             month = month_name.lower()
         else:
             #We were not able to get the name of the month to analyze data so we continue the loop.
-            print("Sorry we were not able to get the name of the month to filter data, Please input either 'all' to apply no month filter or january, february, ... , june.\n")
+            print("Incorrect Input. Please enter either 'all' or monday,tuesday,... sunday.")
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day_name = ''
@@ -52,7 +52,7 @@ def get_filters():
             day = day_name.lower()
         else:
             #We were not able to get the name of the month to analyze data so we continue the loop.
-            print("Sorry we were not able to get the name of the day to filter data, Please input either 'all' to apply no day filter or monday, tuesday, ... sunday.\n")
+            print("Incorrect Input. Please enter either 'all' or monday,tuesday,... sunday.")
 
     print('-'*40)
     return city, month, day
