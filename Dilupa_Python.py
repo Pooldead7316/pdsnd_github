@@ -20,7 +20,7 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print("Welcome to the US Bikeshare Data Center.Let's check some data")
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city_name = ''
     while city_name.lower() not in CITY_DATA:
@@ -41,7 +41,7 @@ def get_filters():
             month = month_name.lower()
         else:
             #We were not able to get the name of the month to analyze data so we continue the loop.
-            print("Sorry we were not able to get the name of the month to filter data, Please input either 'all' to apply no month filter or january, february, ... , june.\n")
+            print("Incorrect Input. Please enter either 'all' or monday,tuesday,... sunday.")
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day_name = ''
@@ -52,7 +52,7 @@ def get_filters():
             day = day_name.lower()
         else:
             #We were not able to get the name of the month to analyze data so we continue the loop.
-            print("Sorry we were not able to get the name of the day to filter data, Please input either 'all' to apply no day filter or monday, tuesday, ... sunday.\n")
+            print("Incorrect Input. Please enter either 'all' or monday,tuesday,... sunday.")
 
     print('-'*40)
     return city, month, day
@@ -197,6 +197,7 @@ def user_stats(df, city):
         print('Earliest birth from the given fitered data is: {}\n'.format(earliest_birth))
         print('Most recent birth from the given fitered data is: {}\n'.format(most_recent_birth))
         print('Most common birth from the given fitered data is: {}\n'.format(most_common_birth) )
+
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
